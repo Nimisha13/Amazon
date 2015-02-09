@@ -1,0 +1,3 @@
+*** Variables ***
+${Book Title}     ${EMPTY}
+${bookquantity}    ${EMPTY}

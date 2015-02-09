@@ -1,0 +1,12 @@
+*** Settings ***
+Resource          function/function_purchase_book.txt
+Resource          function/function_search_book.txt
+Resource          function/function_select_book.txt
+
+*** Test Cases ***
+Book
+    search_book
+    select_book
+    purchase_book
+
+*** Keywords ***

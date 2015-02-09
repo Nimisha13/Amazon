@@ -1,0 +1,8 @@
+*** Settings ***
+Resource          ../pageobject/pageobject_purchase_book.txt
+
+*** Keywords ***
+purchase_book
+    !Go to basket
+    !verify name and quantity of book
+    !Place the order

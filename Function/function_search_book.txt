@@ -1,0 +1,8 @@
+*** Settings ***
+Resource          ../pageobject/pageobject_search_book.txt
+
+*** Keywords ***
+search_book
+    !openBrowser
+    !Enter the name of the book
+    !presses the button go

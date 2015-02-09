@@ -1,0 +1,4 @@
+*** Variables ***
+${url}            http://www.amazon.com/
+${browser}        ff
+${bookname}       Robot Framework

@@ -1,0 +1,18 @@
+*** Settings ***
+Resource          ../conf/conf_purchase_book.txt
+Library           Selenium2Library
+
+*** Keywords ***
+!Go to basket
+    Wait Until Page Contains Element    xpath=//span[@class='nav-cart-button nav-sprite']
+    Click Element    xpath=//span[@class='nav-cart-button nav-sprite']
+
+!verify name and quantity of book
+    ${Book Title}=    Get Text    xpath=//form[@id='activeCartViewForm']//li[1]/span/a/span
+    Should Be Equal As Strings    ${Book Title}    Robot Framework Test Automation
+    ${bookquantity}=    Get Text    xpath=//*[@id='a-autoid-2-announce']
+    Should Be Equal As Strings    ${bookquantity}    5
+
+!Place the order
+    Click Button    xpath=//input[@name='proceedToCheckout']
+    Close Browser

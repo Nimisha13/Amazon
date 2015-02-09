@@ -1,0 +1,15 @@
+*** Settings ***
+Resource          ../conf/conf_select_book.txt
+Library           Selenium2Library
+
+*** Keywords ***
+!Select book Robot Framework Test Automation
+    Wait Until Page Contains Element    //a[@title='Robot Framework Test Automation']
+    Click Element    //a[@title='Robot Framework Test Automation']
+
+!Enter Quantity
+    Click Element    xpath=//select[@name='quantity']/option[@value='5']
+
+!Add to cart
+    Wait Until Page Contains Element    xpath=//input[@id='add-to-cart-button']
+    Click Button    xpath=//input[@id='add-to-cart-button']

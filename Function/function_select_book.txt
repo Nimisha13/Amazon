@@ -1,0 +1,8 @@
+*** Settings ***
+Resource          ../pageobject/pageobject_select_book.txt
+
+*** Keywords ***
+select_book
+    !Select book Robot Framework Test Automation
+    !Enter Quantity
+    !Add to cart

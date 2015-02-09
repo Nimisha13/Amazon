@@ -1,0 +1,16 @@
+*** Settings ***
+Resource          ../conf/conf_search_book.txt
+Library           Selenium2Library
+
+*** Variables ***
+
+*** Keywords ***
+!openBrowser
+    open browser    ${url}    ${browser}    None
+    Maximize Browser Window
+
+!Enter the name of the book
+    Input Text    //input[@id='twotabsearchtextbox']    ${bookname}
+
+!presses the button go
+    Click Button    //input[@class='nav-submit-input']
